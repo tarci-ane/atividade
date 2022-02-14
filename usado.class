@@ -1,0 +1,31 @@
+package atividade_2;
+
+import javax.swing.JOptionPane;
+
+public class usado extends imovel{
+
+	public usado() {
+		
+	}
+
+	public usado(String endereco, double preco) {
+		super(endereco, preco);
+	
+	}
+
+	public double calculavalor() {
+		return this.getPreco() *0.9;
+		
+	}
+	
+	public void imprime() {
+		JOptionPane.showMessageDialog(null, "dadps do imovel:\n"
+				+ "tipo: usado\n"
+				+ "endereço:"+ this.getEndereco()+ "\n"
+				+ "valor: R$" + calculavalor());
+				
+	}
+	
+	
+	
+}
