@@ -1,0 +1,29 @@
+package atividade_2;
+
+import javax.swing.JOptionPane;
+
+public class novo extends imovel {
+
+	public novo() {
+		
+	}
+
+	public novo(String endereco, double preco) {
+		super(endereco, preco);
+		
+	}
+
+	public double calculavalor() {
+		return this.getPreco() *1.1;
+		
+	}
+	
+	public void imprime() {
+		JOptionPane.showMessageDialog(null, "dadps do imovel:\n"
+				+ "tipo: novo\n"
+				+ "endereço:"+ this.getEndereco()+ "\n"
+				+ "valor: R$" + calculavalor());
+		
+		
+	}
+}
