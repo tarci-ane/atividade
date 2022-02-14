@@ -1,0 +1,56 @@
+package atividade_2;
+
+import javax.swing.JOptionPane;
+
+public class principal {
+	
+	static String endereco;
+	static double preco;
+	
+	public static void main (String[] args) {
+		int op;
+				
+		recebeDados();
+		
+		for(;;) {
+			
+			op = Integer.parseInt(JOptionPane.showInputDialog("qual o tipo do imovel?\n"
+					+ "1 - novo\n"
+					+ "2 - usado\n"
+					+ "3 - novo imóvel\n"
+					+ "4 - sair"));
+			
+			if(op==1) {
+				novo no = new novo(endereco, preco);
+				no.imprime();
+				
+}
+			
+			else if(op==2) {
+				usado us = new usado (endereco, preco);
+				us.imprime();
+				
+}
+			
+			else if(op==3) {
+				recebeDados();
+				
+			}
+			
+			else if(op==4) {
+				JOptionPane.showMessageDialog(null, "finalizando");
+				break;
+				
+		}
+			else {
+				JOptionPane.showMessageDialog(null, "opção invalida");
+			}
+		}
+	}
+	
+	public static void recebeDados() {
+	 endereco = String.valueOf(JOptionPane.showInputDialog("qual o endereço?\n"));
+	 preco = Double.parseDouble(JOptionPane.showInputDialog("qual o valor do imovel?\n"));
+	
+	}
+}
